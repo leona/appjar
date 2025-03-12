@@ -24,7 +24,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-
+          sparse-checkout: 'src'
+          sparse-checkout-cone-mode: false
       - name: Build wails
         uses: dAppServer/wails-build-action@main
         id: build
