@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  build:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: no
+    container_name: appjar-build
+    environment:
+      DOCKER_API_VERSION: 1.47
+    command: wails build
+    volumes:
+      - ./src:/app
+    

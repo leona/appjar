@@ -1,0 +1,4 @@
+templates/*.local.sh
+node_modules
+build
+dist
